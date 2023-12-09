@@ -156,13 +156,13 @@ header {
   }
   
   img {
-    width: 300px; 
+    width: 300px;
     margin-left: 25px;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
   }
   
   h2 {
-    line-height: 36px; 
+    line-height: 36px;
   }
   
   p {
@@ -178,9 +178,6 @@ header {
     display: flex;
     justify-content: center;
   }
-  
-
-
 
 
 /************* bookings page *************/
@@ -198,7 +195,7 @@ header {
 */
 .booking-page {
     width: 600px;
-    margin: auto; 
+    margin: auto;
   }
   
   .booking-page p {
@@ -206,36 +203,35 @@ header {
   }
   
   .day-selector {
-    margin-bottom: 12px; 
+    margin-bottom: 12px;
   }
   
-  .list-item {
+  .list-item,
+  .small-button {
     width: 60px;
-    border: 1px solid black; 
-    margin-bottom: 20px; 
+    border: 1px solid black;
+    margin-bottom: 20px;
   }
   
   .small-button {
-    width: 60px;
-    border: 1px solid black; 
-    padding: 5px; 
-    margin-bottom: 20px; 
+    padding: 5px;
   }
   
   .top-margin {
-    margin-top: 24px; 
-    margin-bottom: 12px; 
+    margin-top: 24px;
+    margin-bottom: 12px;
   }
   
   .clear-days-button {
     width: 200px;
   }
   
-    .clicked {
-    background-color: #E5AF42; 
+  .clicked {
+    background-color: #E5AF42;
   }
+  
   .booking-page * {
-    margin: auto; 
+    margin: auto;
   }
 /************* contact page *************/
 /* TO DO:
@@ -293,4 +289,8 @@ header {
   
   button {
     margin-top: 4px; 
+  }
+
+  .thank-you-message {
+    font-size: 24px;
   }

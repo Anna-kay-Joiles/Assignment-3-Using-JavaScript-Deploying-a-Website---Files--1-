@@ -3,7 +3,9 @@
 // Do any of these variables need to be initialized when the page is loaded? 
 // When do they need to be reset or updated?
 
-
+const costPerDay = 35;
+let numberOfDaysSelected = 0;
+let totalCost = 0;
 
 
 /********* colour change days of week *********/
@@ -38,3 +40,53 @@
 // when a calculation is needed, set the innerHTML of the calculated-cost element to the appropriate value
 
 
+const dayButtons = document.querySelectorAll('.day-selector');
+const clearButton = document.getElementById('clear-button');
+const halfButton = document.getElementById('half-button');
+const fullButton = document.getElementById('full-button');
+const calculatedCostElement = document.getElementById('calculated-cost');
+
+dayButtons.forEach((button) => {
+  button.addEventListener('click', handleDayButtonClick);
+});
+
+clearButton.addEventListener('click', handleClearButtonClick);
+
+halfButton.addEventListener('click', handleRateButtonClick);
+fullButton.addEventListener('click', handleRateButtonClick);
+
+
+function handleDayButtonClick(event) {
+  const clickedDay = event.target;
+
+  if (!clickedDay.classList.contains('clicked')) {
+    clickedDay.classList.add('clicked');
+    numberOfDaysSelected++;
+    calculateTotalCost();
+  }
+}
+
+function handleClearButtonClick() {
+  dayButtons.forEach((button) => {
+    button.classList.remove('clicked');
+  });
+
+  numberOfDaysSelected = 0;
+
+  calculateTotalCost();
+}
+
+function handleRateButtonClick(event) {
+  halfButton.classList.remove('clicked');
+  fullButton.classList.remove('clicked');
+
+  event.target.classList.add('clicked');
+
+  costPerDay = event.target.id === 'half-button' ? 20 : 35;
+  calculateTotalCost();
+}
+
+function calculateTotalCost() {
+  totalCost = costPerDay * numberOfDaysSelected;
+  calculatedCostElement.innerHTML = `$${totalCost}`;
+}

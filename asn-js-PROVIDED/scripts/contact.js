@@ -2,3 +2,12 @@
 
 // hint: you can change the style of an element by modifying the value of that element's .style.fontSize, or by updating its .classList.
 
+const submitButton = document.getElementById('submit-button');
+
+const contactPage = document.querySelector('.contact-page');
+
+submitButton.addEventListener('click', handleSubmission);
+
+function handleSubmission(event) {
+  event.preventDefault(); 
+  contactPage.innerHTML = '<p class="thank-you-message">Thank you for your message</p>';}
