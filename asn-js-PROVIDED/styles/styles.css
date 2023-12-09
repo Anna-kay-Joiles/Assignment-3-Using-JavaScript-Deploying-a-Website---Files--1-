@@ -45,7 +45,9 @@ body {
 h1 {
     font-size: 48px;
     text-align: center;
-    line-height: 150px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   h2 {
@@ -56,10 +58,6 @@ h1 {
   .large-text {
     font-size: 24px;
   }
-
-
- 
-
 a{
     color: black;
     text-decoration: none;
@@ -73,19 +71,12 @@ footer a:hover{
     text-decoration: underline;
 }
 
-  .fake-button{
-    background-color: #E5AF42;
-    color: black;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid black;
+.fake-button {
+    background-color: #FFDB58;
     text-align: center;
     line-height: 3;
-    cursor: pointer;
-
+    border: 1px solid black;
   }
-
   .fake-button:hover{
     background-color: #4278e5;
     color:white;
@@ -95,6 +86,7 @@ footer a:hover{
     background-color: #4278e5;
     color:white;
     text-decoration: underline;
+    cursor: pointer;
 
   }
 
@@ -131,9 +123,14 @@ header {
     background-color: #E5AF42;
     height: 60px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 200;
     line-height: 60px;
+
   }
+
 
 /************* index page *************/
 
@@ -149,6 +146,8 @@ header {
 
 .flex {
     display: flex;
+    gap: 25px;
+    justify-content: center;
   }
   
   .about-us {
@@ -162,7 +161,7 @@ header {
   }
   
   h2 {
-    line-height: 36px;
+    line-height: 1;
   }
   
   p {
@@ -171,7 +170,7 @@ header {
   
   .fake-button {
     width: 250px;
-    margin-bottom: 150px;
+    margin-right: 150px;
   }
   
   .flex-center {
@@ -196,6 +195,7 @@ header {
 .booking-page {
     width: 600px;
     margin: auto;
+    align-content: center;
   }
   
   .booking-page p {
@@ -205,12 +205,15 @@ header {
   .day-selector {
     margin-bottom: 12px;
   }
+
+  .list-item {
+    margin-bottom: 20px;
+    width: 60px;
+  }
   
   .list-item,
   .small-button {
-    width: 60px;
     border: 1px solid black;
-    margin-bottom: 20px;
   }
   
   .small-button {
@@ -232,7 +235,11 @@ header {
   
   .booking-page * {
     margin: auto;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+  
 /************* contact page *************/
 /* TO DO:
     - the main section of the .contact page will be 420px tall, and centered.
@@ -244,51 +251,41 @@ header {
 
 
 
-.contact-page {
+.contact {
     height: 420px;
-    margin: auto; 
-}
-  
-  .contact-columns {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 24px; 
+    align-items: center;
   }
   
-  .labels-column {
+  .labels {
     width: 150px;
     text-align: right;
   }
   
-  .input-column {
+  .inputs {
     width: 300px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
   }
   
   textarea {
     height: 150px;
   }
   
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  form * {
-    font-family: 'Montserrat', sans-serif;
+  form input, textarea, button {
+    font-family: inherit;
     line-height: 24px;
     font-size: 16px;
-    border: 1px solid black; 
-    margin-bottom: 24px; 
-  }
-  
-  button,textarea {
-    box-sizing: border-box;
-    height: 50px; 
+    border: 1px solid black;
+    margin-bottom: 24px;
   }
   
   button {
-    margin-top: 4px; 
+    margin-left: -1px; 
   }
 
   .thank-you-message {
