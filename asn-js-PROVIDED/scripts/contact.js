@@ -4,10 +4,15 @@
 
 const submitButton = document.getElementById('submit-button');
 
-const contactPage = document.querySelector('.contact-page');
-
-submitButton.addEventListener('click', handleSubmission);
-
-function handleSubmission(event) {
-  event.preventDefault(); 
-  contactPage.innerHTML = '<p class="thank-you-message">Thank you for your message</p>';}
+submitButton.addEventListener('click', function(event) {
+    event.preventDefault(); 
+    const contactPage = document.getElementById('contact-page');
+    
+    const thankYouMessage = document.createElement('p');
+    
+    thankYouMessage.textContent = 'Thank you for your message';
+    
+    thankYouMessage.style.fontSize = '24px';
+    
+    contactPage.innerHTML = ''; 
+    contactPage.appendChild(thankYouMessage); });

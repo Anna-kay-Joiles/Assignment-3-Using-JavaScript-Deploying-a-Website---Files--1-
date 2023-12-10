@@ -104,6 +104,10 @@ header {
     background-color: #E5AF42;
     height: 150px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
   }
   header img {
     width: 100px;
@@ -122,12 +126,12 @@ header {
   footer {
     background-color: #E5AF42;
     height: 60px;
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 200;
-    line-height: 60px;
+    
 
   }
 
@@ -152,6 +156,7 @@ header {
   
   .about-us {
     flex: 1;
+    margin-right: 25px;
   }
   
   img {
@@ -161,7 +166,7 @@ header {
   }
   
   h2 {
-    line-height: 1;
+    line-height: 36px;
   }
   
   p {
@@ -205,28 +210,26 @@ header {
   .day-selector {
     margin-bottom: 12px;
   }
+ 
+  
+.day-selector li {
+  width: 60px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
 
-  .list-item {
-    margin-bottom: 20px;
-    width: 60px;
-  }
-  
-  .list-item,
-  .small-button {
-    border: 1px solid black;
-  }
-  
-  .small-button {
-    padding: 5px;
-  }
-  
-  .top-margin {
-    margin-top: 24px;
-    margin-bottom: 12px;
-  }
-  
+.small-button {
+  border: 1px solid black;
+  width: auto;
+  padding: 5px;
+  margin: 5px;
+}
+
+
   .clear-days-button {
     width: 200px;
+    margin-bottom: 12px;
+    padding-bottom: 15px;
   }
   
   .clicked {
@@ -234,11 +237,29 @@ header {
   }
   
   .booking-page * {
+    box-sizing: border-box;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     }
+    .booking-page div,
+    .booking-page ul {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .booking-page ul {
+        flex-wrap: wrap;
+    }
+    
+    .booking-page li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
   
 /************* contact page *************/
 /* TO DO:
@@ -253,9 +274,10 @@ header {
 
 .contact {
     height: 420px;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
-    justify-content: center;
+    text-align: center;
+    /* justify-content: center; */
     align-items: center;
   }
   
